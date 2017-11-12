@@ -1,0 +1,24 @@
+{
+  "name": "mfportfoliobuilder",
+  "version": "1.0.0",
+  "description": "Project to build and report Mutual Funds Portfolio",
+  "main": "/util/mfUtility.js",
+  "dependencies": {},
+  "devDependencies": {
+    "plain-text-data-to-json": "^1.0.1",
+    "json2csv":"^3.11.5"    
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://grocventory@github.com/grocventory/MFPortfolioBuilder.git"
+  },
+  "author": "Veerender Chama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grocventory/MFPortfolioBuilder/issues"
+  },
+  "homepage": "https://github.com/grocventory/MFPortfolioBuilder#readme"
+}

@@ -83,4 +83,4 @@ var schemeList=[118191,112936,113134,124172,112342,118133,134545,112096,117957,1
 //console.log(keys.split(";"));
 
 var fields = ['Scheme Code','Scheme Name', 'Sale Price','Date'];
-mfUtility.exportToCSV('nav.txt','nav.csv',schemeList,fields);
+mfUtility.exportToCSV('./data/nav.txt','./reports/nav.csv',schemeList,fields);
