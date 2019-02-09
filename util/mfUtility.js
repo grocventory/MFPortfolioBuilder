@@ -4,7 +4,7 @@ var json2csv = require('json2csv');
  
 //var doc = fs.readFileSync('mf_nav.txt', 'utf8');
 //var doc2 = fs.readFileSync('nav.txt', 'utf8');
-//var doc1 = fs.readFileSync("http://portal.amfiindia.com/spages/NAV0.txt",'utf8');
+//var doc1 = fs.readFileSync("https://www.amfiindia.com/spages/NAVAll.txt?t=25072018105321",'utf8');
 var mfUtility = (function() {
 	var rawMFList;
 	var cleanUpMFList = function(arrLines) {
@@ -79,8 +79,8 @@ var mfUtility = (function() {
 
 })()
 
-var schemeList=[118191,112936,113134,124172,112342,118133,134545,112096,117957,111962,113070,111524,102205,101818,109445,103308,113545,102920,100080,101765,105758,102594,112090,103504,103360,118102,113177,140107,141545,112351];
+var schemeList=[118191,112936,113134,124172,112342,118133,134545,112096,117957,111962,113070,111524,102205,101818,109445,103308,113545,102920,100080,101765,105758,102594,112090,103504,103360,118102,113177,140107,141545,112351,100120,112937,100355,141957];
 //console.log(keys.split(";"));
 
-var fields = ['Scheme Code','Scheme Name', 'Sale Price','Date'];
-mfUtility.exportToCSV('./data/nav.txt','./reports/nav.csv',schemeList,fields);
+var fields = ['Scheme Code','Scheme Name', 'Net Asset Value','Date'];
+mfUtility.exportToCSV('../data/navall.txt','../reports/nav(mf).csv',schemeList,fields);
