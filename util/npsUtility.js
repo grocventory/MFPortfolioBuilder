@@ -6,14 +6,19 @@ var fs = require('fs');
 var npsUtility = (function() {
 	var cleanUpNPSList = function(arrLines) {
 		//console.log(Array.isArray(arrList));
-        var regEx =  /SM/gi;
+        var regExId =  /SM/gi;
+         var regExDate =  /\\\r/gi;
 		for (var k = 0; k < arrLines.length; k++) {
 			//console.log(arrList[k].search(/\;/i));
+			//console.log(arrLines[k]);
             var rec = arrLines[k].split(',');
              var rmCol = rec.splice(1,2);
+             //console.log(rec);
              //console.log(line);
              //line[1] = line[1].replace(regEx,'');
-             rec[1] =(typeof rec[1]!=="undefined")?rec[1].replace(regEx,''):"";
+             rec[1] =(typeof rec[1]!=="undefined")?rec[1].replace(regExId,''):"";
+             rec[3] =(typeof rec[3]!=="undefined")?rec[3].replace(/\r\n|\n|\r/gm, ""):"";
+             //console.log(rec);
              //swapping cloumns in order 
              var nav= rec[3];
              var date= rec[0];
